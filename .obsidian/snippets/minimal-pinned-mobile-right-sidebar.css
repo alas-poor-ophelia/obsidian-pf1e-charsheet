@@ -1,0 +1,38 @@
+/*******************************/
+/* Minimal Right-Pinned Sidebar*/
+/*******************************/
+.workspace-drawer.mod-right.is-pinned {
+	/* Tighten up any extra whitespace */
+	margin-top: 0px;
+	padding-top: 0;
+
+	> .workspace-drawer-inner {
+		> .workspace-drawer-header {
+			position: fixed; /* positions sidebar header buttons over tab dropdown */
+			right: 65px;
+			top: 25px;
+			width: 55px;
+			z-index: 3;
+
+			/* Hides note name/counts */
+			> .workspace-drawer-header-left {
+				display: none;
+			}
+		}
+
+		> .workspace-drawer-tab-container {
+			/* Position tab dropdown above tab contents, and apply negative margin for visual bleed */
+			> .workspace-drawer-active-tab-container {
+				> .workspace-drawer-active-tab-header {
+					margin-bottom: -25px;
+					width: 100%;
+					z-index: 2;
+					
+					> .workspace-drawer-active-tab-chevron {
+						margin-right: 15px;
+					}
+				}
+			}
+		}
+	}
+}
